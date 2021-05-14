@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <h1>MY FAMILY BOOK</h1>
+    </head>
+    <body>
+        <img id="family_member_image"src="MyFamily.png">
+        <div>
+            <div>
+                <button onclick="update()">Next</button>
+                </div>
+        </div>
+        <h4 id="famil_member_name">My Family Book</h4>
+        <script>
+            var names=["Ajay","Kavitha","Eshaan",];
+            var images=["Amma.png","Nanna.png","Eshaan.png"];
+
+            var i = 0;
+            function update()
+            {
+            
+            var updatedImage = images[i];
+            var updatedName = names[i];
+            document.getElementById("family_member_image").src = updatedImage;
+            document.getElementById("famil_member_name").innerHTML = updatedName;
+            
+            i++;
+            var length = 3
+            var last_index = length - 1
+            if(i > last_index)
+            {
+                i = 0;
+            }
+            };
+        </script>
+    <script async src="https://drv.tw/inc/wd.js"></script></body>
+</html>
